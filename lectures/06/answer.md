@@ -4,11 +4,20 @@
 
 <!-- [tool call] の行は、表示された行をそのまま貼り付けてください。終わらなかった STEP は、空欄のままでかまいません。 -->
 
-- STEP 1 のツールの名前：
+- STEP 1 のツールの名前：glossary_search_glossary
 - STEP 2 の [tool call]：
+  ```text
+  [tool call]   glossary_search_glossary({'query': '3レベル'})
+  ```
 - STEP 3 の [tool call]：
+  ```text
+  [tool call]   fetch_fetch({'url': 'https://modelcontextprotocol.io/'})
+  ```
 - STEP 4 の [tool call]：
-- 気づき・疑問：
+  ```text
+  [tool call]   aws_aws___search_documentation({'search_phrase': 'Amazon S3 versioning overview'})
+  ```
+- 気づき・疑問：設定ファイルに接続先を追加するだけで、エージェントが使えるツールが増えた。公開されているサーバーでも、自分の環境で起動するものと、外部のURLに接続するものがあると分かった。ツールが増えたとき、モデルがどの説明を見て使い分けるのかが気になった。
 
 ## 宿題
 
